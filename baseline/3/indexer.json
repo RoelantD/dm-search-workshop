@@ -1,0 +1,46 @@
+{
+  "objectType": "indexer",
+  "name": "{{namespace}}-corporate-indexer",
+  "apiVersion": "2026-04-01",
+  "endpoint": "{{searchEndpoint}}",
+  "definition": {
+    "name": "{{namespace}}-corporate-indexer",
+    "dataSourceName": "{{namespace}}-corporate-datasource",
+    "targetIndexName": "{{namespace}}-corporate-index",
+    "parameters": {
+      "configuration": {
+        "parsingMode": "jsonArray"
+      }
+    },
+    "fieldMappings": [
+      {
+        "sourceFieldName": "id",
+        "targetFieldName": "recordId"
+      },
+      {
+        "sourceFieldName": "recordType",
+        "targetFieldName": "recordType"
+      },
+      {
+        "sourceFieldName": "branch",
+        "targetFieldName": "branch"
+      },
+      {
+        "sourceFieldName": "department",
+        "targetFieldName": "department"
+      },
+      {
+        "sourceFieldName": "createdAt",
+        "targetFieldName": "date"
+      },
+      {
+        "sourceFieldName": "subject",
+        "targetFieldName": "subject"
+      },
+      {
+        "sourceFieldName": "content",
+        "targetFieldName": "content"
+      }
+    ]
+  }
+}
