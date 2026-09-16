@@ -1,0 +1,68 @@
+{
+  "objectType": "skillset",
+  "name": "{{namespace}}-corporate-skillset",
+  "apiVersion": "{{apiVersion}}",
+  "endpoint": "{{searchEndpoint}}",
+  "definition": {
+    "name": "{{namespace}}-corporate-skillset",
+    "description": "Enrich corporate archive records with recognized entities and key phrases.",
+    "skills": [
+      {
+        "@odata.type": "#Microsoft.Skills.Text.V3.EntityRecognitionSkill",
+        "name": "entity-recognition",
+        "description": "Extract people, organizations, and locations from record content.",
+        "categories": [
+          "Person",
+          "Organization",
+          "Location"
+        ],
+        "defaultLanguageCode": "en",
+        "context": "/document",
+        "inputs": [
+          {
+            "name": "text",
+            "source": "/document/content"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "persons",
+            "targetName": "people"
+          },
+          {
+            "name": "organizations",
+            "targetName": "organizations"
+          },
+          {
+            "name": "locations",
+            "targetName": "locations"
+          }
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Skills.Text.KeyPhraseExtractionSkill",
+        "name": "key-phrases",
+        "description": "Extract the main themes from record content.",
+        "defaultLanguageCode": "en",
+        "context": "/document",
+        "inputs": [
+          {
+            "name": "text",
+            "source": "/document/content"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "keyPhrases",
+            "targetName": "keyPhrases"
+          }
+        ]
+      }
+    ],
+    "cognitiveServices": {
+      "@odata.type": "#Microsoft.Azure.Search.AIServicesByIdentity",
+      "subdomainUrl": "{{foundryEndpoint}}",
+      "identity": null
+    }
+  }
+}

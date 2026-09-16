@@ -1,0 +1,16 @@
+{
+  "objectType": "datasource",
+  "name": "{{namespace}}-corporate-datasource",
+  "apiVersion": "{{apiVersion}}",
+  "endpoint": "{{searchEndpoint}}",
+  "definition": {
+    "name": "{{namespace}}-corporate-datasource",
+    "type": "azureblob",
+    "credentials": {
+      "connectionString": "ResourceId={{storageResourceId}};"
+    },
+    "container": {
+      "name": "{{storageContainer}}"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "objectType": "indexer",
+  "name": "{{namespace}}-corporate-indexer",
+  "apiVersion": "2026-04-01",
+  "endpoint": "{{searchEndpoint}}",
+  "definition": {
+    "name": "{{namespace}}-corporate-indexer",
+    "dataSourceName": "{{namespace}}-corporate-datasource",
+    "targetIndexName": "{{namespace}}-corporate-index",
+    "parameters": {
+      "configuration": {
+        "parsingMode": "jsonArray"
+      }
+    },
+    "fieldMappings": [
+      {
+        "sourceFieldName": "id",
+        "targetFieldName": "recordId"
+      },
+      {
+        "sourceFieldName": "subject",
+        "targetFieldName": "subject"
+      }
+    ]
+  }
+}

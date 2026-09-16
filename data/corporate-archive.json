@@ -1,0 +1,1190 @@
+[
+  {
+    "id": "dm-0001",
+    "recordType": "internal-memo",
+    "branch": "Scranton",
+    "department": "Management",
+    "createdAt": "2026-01-08",
+    "subject": "Printer outage on the sales floor",
+    "content": "The shared laser printer in Scranton jammed repeatedly this week. Alan Prentice reported that reams of paper were wasted and asked facilities for a service visit. Until it is fixed, please route print jobs to the reception printer."
+  },
+  {
+    "id": "dm-0002",
+    "recordType": "sales-note",
+    "branch": "Stamford",
+    "department": "Sales",
+    "createdAt": "2026-01-10",
+    "subject": "Paper reorder for Harborview Realty",
+    "content": "Bianca Rao closed a repeat order of forty cases of multipurpose paper for Harborview Realty. The Stamford branch will fulfill from local stock and follow up on a glossy paper sample the client requested."
+  },
+  {
+    "id": "dm-0003",
+    "recordType": "complaint",
+    "branch": "Utica",
+    "department": "Customer Service",
+    "createdAt": "2026-01-12",
+    "subject": "Late delivery complaint from Meridian Accounting",
+    "content": "Meridian Accounting filed a complaint that a paper shipment arrived three days late. Carl Winters apologized, issued a credit, and flagged the Utica warehouse dispatch delay for review."
+  },
+  {
+    "id": "dm-0004",
+    "recordType": "policy",
+    "branch": "Nashua",
+    "department": "Management",
+    "createdAt": "2026-01-14",
+    "subject": "Fire drill schedule",
+    "content": "The Nashua branch will hold a fire drill next Thursday. Dana Osei is the floor warden and will confirm that all exits and extinguishers are unobstructed."
+  },
+  {
+    "id": "dm-0005",
+    "recordType": "hr-note",
+    "branch": "Akron",
+    "department": "HR",
+    "createdAt": "2026-01-16",
+    "subject": "Slip hazard reported",
+    "content": "Evan Brooks reported a slip hazard from a leaking cooler in the Akron break room. Facilities placed a mat and scheduled a repair to prevent injury."
+  },
+  {
+    "id": "dm-0006",
+    "recordType": "branch-update",
+    "branch": "Buffalo",
+    "department": "Management",
+    "createdAt": "2026-01-18",
+    "subject": "Buffalo monthly branch update",
+    "content": "Farah Nazari summarized the month for the Buffalo branch: paper sales up modestly, one printer problem resolved, and a customer complaint closed. Morale is steady."
+  },
+  {
+    "id": "dm-0007",
+    "recordType": "warehouse-note",
+    "branch": "Albany",
+    "department": "Warehouse",
+    "createdAt": "2026-01-20",
+    "subject": "Inventory discrepancy",
+    "content": "Grace Lindqvist found a count discrepancy on multipurpose paper in the Albany warehouse. A recount matched the system after correcting a mislabeled pallet."
+  },
+  {
+    "id": "dm-0008",
+    "recordType": "meeting-note",
+    "branch": "Rochester",
+    "department": "Management",
+    "createdAt": "2026-01-22",
+    "subject": "Quarterly planning meeting",
+    "content": "In the Rochester planning meeting, Hector Alvarez and Omar Haddad agreed to prioritize paper sales targets and to budget for a printer replacement after repeated problems."
+  },
+  {
+    "id": "dm-0009",
+    "recordType": "hr-note",
+    "branch": "Syracuse",
+    "department": "HR",
+    "createdAt": "2026-01-24",
+    "subject": "Recognition for Ivy Chen",
+    "content": "Priya Nair recognized Ivy Chen for resolving a difficult customer complaint at the Syracuse branch. A note was added to the employee file."
+  },
+  {
+    "id": "dm-0010",
+    "recordType": "sales-note",
+    "branch": "Binghamton",
+    "department": "Sales",
+    "createdAt": "2026-01-26",
+    "subject": "Quarterly target review",
+    "content": "Jonah Mbeki reviewed the Binghamton branch sales targets. Paper sales are close to goal; a push on Ironwood Construction and two other accounts should close the gap."
+  },
+  {
+    "id": "dm-0011",
+    "recordType": "customer-call",
+    "branch": "Scranton",
+    "department": "Customer Service",
+    "createdAt": "2026-01-28",
+    "subject": "Call with Lakeside Dental about reorder",
+    "content": "Karen Dowd called Lakeside Dental to confirm a paper reorder and check satisfaction after a prior late delivery. The client was pleased and increased the order."
+  },
+  {
+    "id": "dm-0012",
+    "recordType": "internal-memo",
+    "branch": "Utica",
+    "department": "Management",
+    "createdAt": "2026-01-30",
+    "subject": "Recurring printer maintenance",
+    "content": "Liam Fitzgerald logged the third printer breakdown this month at the Utica branch. Toner is low and the fuser needs replacement. Tara Whitfield approved the maintenance budget so the printer does not disrupt paper sample runs."
+  },
+  {
+    "id": "dm-0013",
+    "recordType": "sales-note",
+    "branch": "Nashua",
+    "department": "Sales",
+    "createdAt": "2026-02-01",
+    "subject": "New paper account opened",
+    "content": "Marisol Reyes opened a new account with Cedar Grove Clinic for recycled copy paper. Victor Osmond helped prepare the quote. This lifts the Nashua branch toward its quarterly paper sales target."
+  },
+  {
+    "id": "dm-0014",
+    "recordType": "complaint",
+    "branch": "Akron",
+    "department": "Customer Service",
+    "createdAt": "2026-02-03",
+    "subject": "Damaged goods complaint",
+    "content": "Northgate Law reported water-damaged cartons on delivery. Nadia Petrov arranged a replacement and asked the Akron warehouse to improve pallet wrapping."
+  },
+  {
+    "id": "dm-0015",
+    "recordType": "policy",
+    "branch": "Buffalo",
+    "department": "Management",
+    "createdAt": "2026-02-05",
+    "subject": "Fire safety inspection results",
+    "content": "A fire safety inspection of Buffalo found blocked exit near the warehouse. Omar Haddad corrected it the same day and Bianca Rao updated the evacuation map."
+  },
+  {
+    "id": "dm-0016",
+    "recordType": "hr-note",
+    "branch": "Albany",
+    "department": "HR",
+    "createdAt": "2026-02-07",
+    "subject": "Ergonomics review",
+    "content": "Carl Winters completed an ergonomics review for the Albany reception desk after Priya Nair reported wrist strain. New chairs and a monitor riser were approved."
+  },
+  {
+    "id": "dm-0017",
+    "recordType": "branch-update",
+    "branch": "Rochester",
+    "department": "Management",
+    "createdAt": "2026-02-09",
+    "subject": "Branch hours change",
+    "content": "The Rochester branch will open thirty minutes earlier to serve morning delivery pickups. Dana Osei notified staff and updated the door signage."
+  },
+  {
+    "id": "dm-0018",
+    "recordType": "warehouse-note",
+    "branch": "Syracuse",
+    "department": "Warehouse",
+    "createdAt": "2026-02-11",
+    "subject": "Forklift out of service",
+    "content": "The Syracuse warehouse forklift needs a hydraulic repair. Evan Brooks rerouted loading to the second dock so shipments were not delayed."
+  },
+  {
+    "id": "dm-0019",
+    "recordType": "meeting-note",
+    "branch": "Binghamton",
+    "department": "Management",
+    "createdAt": "2026-02-13",
+    "subject": "Pricing decision",
+    "content": "Management decided to hold paper pricing steady this quarter. Tara Whitfield will communicate the decision to the Binghamton sales team."
+  },
+  {
+    "id": "dm-0020",
+    "recordType": "hr-note",
+    "branch": "Scranton",
+    "department": "HR",
+    "createdAt": "2026-02-15",
+    "subject": "Conflict resolution",
+    "content": "Victor Osmond and a warehouse colleague at Scranton had a scheduling disagreement. Grace Lindqvist mediated and both agreed on a rotation."
+  },
+  {
+    "id": "dm-0021",
+    "recordType": "sales-note",
+    "branch": "Stamford",
+    "department": "Sales",
+    "createdAt": "2026-02-17",
+    "subject": "Pipeline update",
+    "content": "Hector Alvarez updated the Stamford pipeline: three paper accounts in negotiation, including Harborview Realty. Alan Prentice will follow up before month end."
+  },
+  {
+    "id": "dm-0022",
+    "recordType": "customer-call",
+    "branch": "Utica",
+    "department": "Customer Service",
+    "createdAt": "2026-02-19",
+    "subject": "Follow-up call on complaint",
+    "content": "Bianca Rao followed up by phone with Meridian Accounting about a damaged-goods complaint. The replacement arrived and Meridian Accounting withdrew the complaint."
+  },
+  {
+    "id": "dm-0023",
+    "recordType": "internal-memo",
+    "branch": "Akron",
+    "department": "Management",
+    "createdAt": "2026-02-21",
+    "subject": "Printer replacement proposal",
+    "content": "Given the ongoing printer problems in Akron, Carl Winters proposed replacing the aging unit. The cost is offset by reduced paper waste and fewer support calls."
+  },
+  {
+    "id": "dm-0024",
+    "recordType": "sales-note",
+    "branch": "Buffalo",
+    "department": "Sales",
+    "createdAt": "2026-02-23",
+    "subject": "Bulk cardstock quote",
+    "content": "Riverbend Logistics asked Dana Osei for a bulk cardstock quote. Margins are thin, so Dana Osei escalated pricing approval before committing the Buffalo branch to the deal."
+  },
+  {
+    "id": "dm-0025",
+    "recordType": "complaint",
+    "branch": "Albany",
+    "department": "Customer Service",
+    "createdAt": "2026-02-25",
+    "subject": "Billing dispute",
+    "content": "Summit Insurance disputed a duplicate invoice. Liam Fitzgerald corrected the billing and Evan Brooks confirmed the customer was satisfied with the resolution."
+  },
+  {
+    "id": "dm-0026",
+    "recordType": "policy",
+    "branch": "Rochester",
+    "department": "Management",
+    "createdAt": "2026-02-27",
+    "subject": "Updated evacuation procedure",
+    "content": "Following the last drill, Farah Nazari revised the Rochester evacuation procedure so warehouse staff and sales staff use separate muster points."
+  },
+  {
+    "id": "dm-0027",
+    "recordType": "hr-note",
+    "branch": "Syracuse",
+    "department": "HR",
+    "createdAt": "2026-03-01",
+    "subject": "Safety training completed",
+    "content": "All Syracuse warehouse staff completed forklift safety training. Grace Lindqvist recorded the certifications in the HR file."
+  },
+  {
+    "id": "dm-0028",
+    "recordType": "branch-update",
+    "branch": "Binghamton",
+    "department": "Management",
+    "createdAt": "2026-03-03",
+    "subject": "Cross-branch coverage",
+    "content": "With Hector Alvarez on leave, the Binghamton branch arranged coverage from a neighboring branch so sales calls and reception stayed staffed."
+  },
+  {
+    "id": "dm-0029",
+    "recordType": "warehouse-note",
+    "branch": "Scranton",
+    "department": "Warehouse",
+    "createdAt": "2026-03-05",
+    "subject": "Shipping backlog cleared",
+    "content": "Ivy Chen cleared a shipping backlog in the Scranton warehouse after a busy paper sales week. Dispatch is back on schedule."
+  },
+  {
+    "id": "dm-0030",
+    "recordType": "meeting-note",
+    "branch": "Stamford",
+    "department": "Management",
+    "createdAt": "2026-03-07",
+    "subject": "Headcount decision",
+    "content": "Rosa Delgado approved one seasonal warehouse hire for the Stamford branch to handle the shipping backlog identified last week."
+  },
+  {
+    "id": "dm-0031",
+    "recordType": "hr-note",
+    "branch": "Utica",
+    "department": "HR",
+    "createdAt": "2026-03-09",
+    "subject": "Return from leave",
+    "content": "Karen Dowd returned from leave to the Utica branch. HR confirmed benefits and updated the roster."
+  },
+  {
+    "id": "dm-0032",
+    "recordType": "sales-note",
+    "branch": "Nashua",
+    "department": "Sales",
+    "createdAt": "2026-03-11",
+    "subject": "Target exceeded",
+    "content": "The Nashua branch exceeded its paper sales target this month. Liam Fitzgerald credited strong repeat orders and a resolved delivery complaint."
+  },
+  {
+    "id": "dm-0033",
+    "recordType": "customer-call",
+    "branch": "Akron",
+    "department": "Customer Service",
+    "createdAt": "2026-03-13",
+    "subject": "Onboarding call",
+    "content": "Victor Osmond held an onboarding call with Northgate Law for a new paper account served by the Akron branch, covering delivery windows and billing."
+  },
+  {
+    "id": "dm-0034",
+    "recordType": "internal-memo",
+    "branch": "Albany",
+    "department": "Management",
+    "createdAt": "2026-03-15",
+    "subject": "Printer outage on the sales floor",
+    "content": "The shared laser printer in Albany jammed repeatedly this week. Nadia Petrov reported that reams of paper were wasted and asked facilities for a service visit. Until it is fixed, please route print jobs to the reception printer."
+  },
+  {
+    "id": "dm-0035",
+    "recordType": "sales-note",
+    "branch": "Rochester",
+    "department": "Sales",
+    "createdAt": "2026-03-17",
+    "subject": "Paper reorder for Parkway Printing",
+    "content": "Omar Haddad closed a repeat order of forty cases of multipurpose paper for Parkway Printing. The Rochester branch will fulfill from local stock and follow up on a glossy paper sample the client requested."
+  },
+  {
+    "id": "dm-0036",
+    "recordType": "complaint",
+    "branch": "Syracuse",
+    "department": "Customer Service",
+    "createdAt": "2026-03-19",
+    "subject": "Late delivery complaint from Blue Heron Cafe",
+    "content": "Blue Heron Cafe filed a complaint that a paper shipment arrived three days late. Priya Nair apologized, issued a credit, and flagged the Syracuse warehouse dispatch delay for review."
+  },
+  {
+    "id": "dm-0037",
+    "recordType": "policy",
+    "branch": "Binghamton",
+    "department": "Management",
+    "createdAt": "2026-03-21",
+    "subject": "Fire drill schedule",
+    "content": "The Binghamton branch will hold a fire drill next Thursday. Rosa Delgado is the floor warden and will confirm that all exits and extinguishers are unobstructed."
+  },
+  {
+    "id": "dm-0038",
+    "recordType": "hr-note",
+    "branch": "Scranton",
+    "department": "HR",
+    "createdAt": "2026-03-23",
+    "subject": "Slip hazard reported",
+    "content": "Sven Larsson reported a slip hazard from a leaking cooler in the Scranton break room. Facilities placed a mat and scheduled a repair to prevent injury."
+  },
+  {
+    "id": "dm-0039",
+    "recordType": "branch-update",
+    "branch": "Stamford",
+    "department": "Management",
+    "createdAt": "2026-03-25",
+    "subject": "Stamford monthly branch update",
+    "content": "Tara Whitfield summarized the month for the Stamford branch: paper sales up modestly, one printer problem resolved, and a customer complaint closed. Morale is steady."
+  },
+  {
+    "id": "dm-0040",
+    "recordType": "warehouse-note",
+    "branch": "Utica",
+    "department": "Warehouse",
+    "createdAt": "2026-03-27",
+    "subject": "Inventory discrepancy",
+    "content": "Victor Osmond found a count discrepancy on multipurpose paper in the Utica warehouse. A recount matched the system after correcting a mislabeled pallet."
+  },
+  {
+    "id": "dm-0041",
+    "recordType": "meeting-note",
+    "branch": "Nashua",
+    "department": "Management",
+    "createdAt": "2026-03-29",
+    "subject": "Quarterly planning meeting",
+    "content": "In the Nashua planning meeting, Alan Prentice and Hector Alvarez agreed to prioritize paper sales targets and to budget for a printer replacement after repeated problems."
+  },
+  {
+    "id": "dm-0042",
+    "recordType": "hr-note",
+    "branch": "Akron",
+    "department": "HR",
+    "createdAt": "2026-03-31",
+    "subject": "Recognition for Bianca Rao",
+    "content": "Ivy Chen recognized Bianca Rao for resolving a difficult customer complaint at the Akron branch. A note was added to the employee file."
+  },
+  {
+    "id": "dm-0043",
+    "recordType": "sales-note",
+    "branch": "Buffalo",
+    "department": "Sales",
+    "createdAt": "2026-04-02",
+    "subject": "Quarterly target review",
+    "content": "Carl Winters reviewed the Buffalo branch sales targets. Paper sales are close to goal; a push on Riverbend Logistics and two other accounts should close the gap."
+  },
+  {
+    "id": "dm-0044",
+    "recordType": "customer-call",
+    "branch": "Albany",
+    "department": "Customer Service",
+    "createdAt": "2026-04-04",
+    "subject": "Call with Summit Insurance about reorder",
+    "content": "Dana Osei called Summit Insurance to confirm a paper reorder and check satisfaction after a prior late delivery. The client was pleased and increased the order."
+  },
+  {
+    "id": "dm-0045",
+    "recordType": "internal-memo",
+    "branch": "Syracuse",
+    "department": "Management",
+    "createdAt": "2026-04-06",
+    "subject": "Recurring printer maintenance",
+    "content": "Evan Brooks logged the third printer breakdown this month at the Syracuse branch. Toner is low and the fuser needs replacement. Liam Fitzgerald approved the maintenance budget so the printer does not disrupt paper sample runs."
+  },
+  {
+    "id": "dm-0046",
+    "recordType": "sales-note",
+    "branch": "Binghamton",
+    "department": "Sales",
+    "createdAt": "2026-04-08",
+    "subject": "New paper account opened",
+    "content": "Farah Nazari opened a new account with Ironwood Construction for recycled copy paper. Marisol Reyes helped prepare the quote. This lifts the Binghamton branch toward its quarterly paper sales target."
+  },
+  {
+    "id": "dm-0047",
+    "recordType": "complaint",
+    "branch": "Scranton",
+    "department": "Customer Service",
+    "createdAt": "2026-04-10",
+    "subject": "Damaged goods complaint",
+    "content": "Lakeside Dental reported water-damaged cartons on delivery. Grace Lindqvist arranged a replacement and asked the Scranton warehouse to improve pallet wrapping."
+  },
+  {
+    "id": "dm-0048",
+    "recordType": "policy",
+    "branch": "Stamford",
+    "department": "Management",
+    "createdAt": "2026-04-12",
+    "subject": "Fire safety inspection results",
+    "content": "A fire safety inspection of Stamford found blocked exit near the warehouse. Hector Alvarez corrected it the same day and Omar Haddad updated the evacuation map."
+  },
+  {
+    "id": "dm-0049",
+    "recordType": "hr-note",
+    "branch": "Utica",
+    "department": "HR",
+    "createdAt": "2026-04-14",
+    "subject": "Ergonomics review",
+    "content": "Priya Nair completed an ergonomics review for the Utica reception desk after Ivy Chen reported wrist strain. New chairs and a monitor riser were approved."
+  },
+  {
+    "id": "dm-0050",
+    "recordType": "branch-update",
+    "branch": "Nashua",
+    "department": "Management",
+    "createdAt": "2026-04-16",
+    "subject": "Branch hours change",
+    "content": "The Nashua branch will open thirty minutes earlier to serve morning delivery pickups. Rosa Delgado notified staff and updated the door signage."
+  },
+  {
+    "id": "dm-0051",
+    "recordType": "warehouse-note",
+    "branch": "Akron",
+    "department": "Warehouse",
+    "createdAt": "2026-04-18",
+    "subject": "Forklift out of service",
+    "content": "The Akron warehouse forklift needs a hydraulic repair. Sven Larsson rerouted loading to the second dock so shipments were not delayed."
+  },
+  {
+    "id": "dm-0052",
+    "recordType": "meeting-note",
+    "branch": "Buffalo",
+    "department": "Management",
+    "createdAt": "2026-04-20",
+    "subject": "Pricing decision",
+    "content": "Management decided to hold paper pricing steady this quarter. Liam Fitzgerald will communicate the decision to the Buffalo sales team."
+  },
+  {
+    "id": "dm-0053",
+    "recordType": "hr-note",
+    "branch": "Albany",
+    "department": "HR",
+    "createdAt": "2026-04-22",
+    "subject": "Conflict resolution",
+    "content": "Marisol Reyes and a warehouse colleague at Albany had a scheduling disagreement. Victor Osmond mediated and both agreed on a rotation."
+  },
+  {
+    "id": "dm-0054",
+    "recordType": "sales-note",
+    "branch": "Rochester",
+    "department": "Sales",
+    "createdAt": "2026-04-24",
+    "subject": "Pipeline update",
+    "content": "Alan Prentice updated the Rochester pipeline: three paper accounts in negotiation, including Parkway Printing. Nadia Petrov will follow up before month end."
+  },
+  {
+    "id": "dm-0055",
+    "recordType": "customer-call",
+    "branch": "Syracuse",
+    "department": "Customer Service",
+    "createdAt": "2026-04-26",
+    "subject": "Follow-up call on complaint",
+    "content": "Omar Haddad followed up by phone with Blue Heron Cafe about a damaged-goods complaint. The replacement arrived and Blue Heron Cafe withdrew the complaint."
+  },
+  {
+    "id": "dm-0056",
+    "recordType": "internal-memo",
+    "branch": "Scranton",
+    "department": "Management",
+    "createdAt": "2026-04-28",
+    "subject": "Printer replacement proposal",
+    "content": "Given the ongoing printer problems in Scranton, Priya Nair proposed replacing the aging unit. The cost is offset by reduced paper waste and fewer support calls."
+  },
+  {
+    "id": "dm-0057",
+    "recordType": "sales-note",
+    "branch": "Stamford",
+    "department": "Sales",
+    "createdAt": "2026-04-30",
+    "subject": "Bulk cardstock quote",
+    "content": "Harborview Realty asked Rosa Delgado for a bulk cardstock quote. Margins are thin, so Rosa Delgado escalated pricing approval before committing the Stamford branch to the deal."
+  },
+  {
+    "id": "dm-0058",
+    "recordType": "complaint",
+    "branch": "Utica",
+    "department": "Customer Service",
+    "createdAt": "2026-05-02",
+    "subject": "Billing dispute",
+    "content": "Meridian Accounting disputed a duplicate invoice. Evan Brooks corrected the billing and Sven Larsson confirmed the customer was satisfied with the resolution."
+  },
+  {
+    "id": "dm-0059",
+    "recordType": "policy",
+    "branch": "Nashua",
+    "department": "Management",
+    "createdAt": "2026-05-04",
+    "subject": "Updated evacuation procedure",
+    "content": "Following the last drill, Tara Whitfield revised the Nashua evacuation procedure so warehouse staff and sales staff use separate muster points."
+  },
+  {
+    "id": "dm-0060",
+    "recordType": "hr-note",
+    "branch": "Akron",
+    "department": "HR",
+    "createdAt": "2026-05-06",
+    "subject": "Safety training completed",
+    "content": "All Akron warehouse staff completed forklift safety training. Victor Osmond recorded the certifications in the HR file."
+  },
+  {
+    "id": "dm-0061",
+    "recordType": "branch-update",
+    "branch": "Buffalo",
+    "department": "Management",
+    "createdAt": "2026-05-08",
+    "subject": "Cross-branch coverage",
+    "content": "With Alan Prentice on leave, the Buffalo branch arranged coverage from a neighboring branch so sales calls and reception stayed staffed."
+  },
+  {
+    "id": "dm-0062",
+    "recordType": "warehouse-note",
+    "branch": "Albany",
+    "department": "Warehouse",
+    "createdAt": "2026-05-10",
+    "subject": "Shipping backlog cleared",
+    "content": "Bianca Rao cleared a shipping backlog in the Albany warehouse after a busy paper sales week. Dispatch is back on schedule."
+  },
+  {
+    "id": "dm-0063",
+    "recordType": "meeting-note",
+    "branch": "Rochester",
+    "department": "Management",
+    "createdAt": "2026-05-12",
+    "subject": "Headcount decision",
+    "content": "Jonah Mbeki approved one seasonal warehouse hire for the Rochester branch to handle the shipping backlog identified last week."
+  },
+  {
+    "id": "dm-0064",
+    "recordType": "hr-note",
+    "branch": "Syracuse",
+    "department": "HR",
+    "createdAt": "2026-05-14",
+    "subject": "Return from leave",
+    "content": "Dana Osei returned from leave to the Syracuse branch. HR confirmed benefits and updated the roster."
+  },
+  {
+    "id": "dm-0065",
+    "recordType": "sales-note",
+    "branch": "Binghamton",
+    "department": "Sales",
+    "createdAt": "2026-05-16",
+    "subject": "Target exceeded",
+    "content": "The Binghamton branch exceeded its paper sales target this month. Evan Brooks credited strong repeat orders and a resolved delivery complaint."
+  },
+  {
+    "id": "dm-0066",
+    "recordType": "customer-call",
+    "branch": "Scranton",
+    "department": "Customer Service",
+    "createdAt": "2026-05-18",
+    "subject": "Onboarding call",
+    "content": "Marisol Reyes held an onboarding call with Lakeside Dental for a new paper account served by the Scranton branch, covering delivery windows and billing."
+  },
+  {
+    "id": "dm-0067",
+    "recordType": "internal-memo",
+    "branch": "Utica",
+    "department": "Management",
+    "createdAt": "2026-05-20",
+    "subject": "Printer outage on the sales floor",
+    "content": "The shared laser printer in Utica jammed repeatedly this week. Grace Lindqvist reported that reams of paper were wasted and asked facilities for a service visit. Until it is fixed, please route print jobs to the reception printer."
+  },
+  {
+    "id": "dm-0068",
+    "recordType": "sales-note",
+    "branch": "Nashua",
+    "department": "Sales",
+    "createdAt": "2026-05-22",
+    "subject": "Paper reorder for Cedar Grove Clinic",
+    "content": "Hector Alvarez closed a repeat order of forty cases of multipurpose paper for Cedar Grove Clinic. The Nashua branch will fulfill from local stock and follow up on a glossy paper sample the client requested."
+  },
+  {
+    "id": "dm-0069",
+    "recordType": "complaint",
+    "branch": "Akron",
+    "department": "Customer Service",
+    "createdAt": "2026-05-24",
+    "subject": "Late delivery complaint from Northgate Law",
+    "content": "Northgate Law filed a complaint that a paper shipment arrived three days late. Ivy Chen apologized, issued a credit, and flagged the Akron warehouse dispatch delay for review."
+  },
+  {
+    "id": "dm-0070",
+    "recordType": "policy",
+    "branch": "Buffalo",
+    "department": "Management",
+    "createdAt": "2026-05-26",
+    "subject": "Fire drill schedule",
+    "content": "The Buffalo branch will hold a fire drill next Thursday. Jonah Mbeki is the floor warden and will confirm that all exits and extinguishers are unobstructed."
+  },
+  {
+    "id": "dm-0071",
+    "recordType": "hr-note",
+    "branch": "Albany",
+    "department": "HR",
+    "createdAt": "2026-05-28",
+    "subject": "Slip hazard reported",
+    "content": "Karen Dowd reported a slip hazard from a leaking cooler in the Albany break room. Facilities placed a mat and scheduled a repair to prevent injury."
+  },
+  {
+    "id": "dm-0072",
+    "recordType": "branch-update",
+    "branch": "Rochester",
+    "department": "Management",
+    "createdAt": "2026-05-30",
+    "subject": "Rochester monthly branch update",
+    "content": "Liam Fitzgerald summarized the month for the Rochester branch: paper sales up modestly, one printer problem resolved, and a customer complaint closed. Morale is steady."
+  },
+  {
+    "id": "dm-0073",
+    "recordType": "warehouse-note",
+    "branch": "Syracuse",
+    "department": "Warehouse",
+    "createdAt": "2026-06-01",
+    "subject": "Inventory discrepancy",
+    "content": "Marisol Reyes found a count discrepancy on multipurpose paper in the Syracuse warehouse. A recount matched the system after correcting a mislabeled pallet."
+  },
+  {
+    "id": "dm-0074",
+    "recordType": "meeting-note",
+    "branch": "Binghamton",
+    "department": "Management",
+    "createdAt": "2026-06-03",
+    "subject": "Quarterly planning meeting",
+    "content": "In the Binghamton planning meeting, Nadia Petrov and Alan Prentice agreed to prioritize paper sales targets and to budget for a printer replacement after repeated problems."
+  },
+  {
+    "id": "dm-0075",
+    "recordType": "hr-note",
+    "branch": "Scranton",
+    "department": "HR",
+    "createdAt": "2026-06-05",
+    "subject": "Recognition for Omar Haddad",
+    "content": "Bianca Rao recognized Omar Haddad for resolving a difficult customer complaint at the Scranton branch. A note was added to the employee file."
+  },
+  {
+    "id": "dm-0076",
+    "recordType": "sales-note",
+    "branch": "Stamford",
+    "department": "Sales",
+    "createdAt": "2026-06-07",
+    "subject": "Quarterly target review",
+    "content": "Priya Nair reviewed the Stamford branch sales targets. Paper sales are close to goal; a push on Harborview Realty and two other accounts should close the gap."
+  },
+  {
+    "id": "dm-0077",
+    "recordType": "customer-call",
+    "branch": "Utica",
+    "department": "Customer Service",
+    "createdAt": "2026-06-09",
+    "subject": "Call with Meridian Accounting about reorder",
+    "content": "Rosa Delgado called Meridian Accounting to confirm a paper reorder and check satisfaction after a prior late delivery. The client was pleased and increased the order."
+  },
+  {
+    "id": "dm-0078",
+    "recordType": "internal-memo",
+    "branch": "Akron",
+    "department": "Management",
+    "createdAt": "2026-06-11",
+    "subject": "Recurring printer maintenance",
+    "content": "Sven Larsson logged the third printer breakdown this month at the Akron branch. Toner is low and the fuser needs replacement. Evan Brooks approved the maintenance budget so the printer does not disrupt paper sample runs."
+  },
+  {
+    "id": "dm-0079",
+    "recordType": "sales-note",
+    "branch": "Buffalo",
+    "department": "Sales",
+    "createdAt": "2026-06-13",
+    "subject": "New paper account opened",
+    "content": "Tara Whitfield opened a new account with Riverbend Logistics for recycled copy paper. Farah Nazari helped prepare the quote. This lifts the Buffalo branch toward its quarterly paper sales target."
+  },
+  {
+    "id": "dm-0080",
+    "recordType": "complaint",
+    "branch": "Albany",
+    "department": "Customer Service",
+    "createdAt": "2026-06-15",
+    "subject": "Damaged goods complaint",
+    "content": "Summit Insurance reported water-damaged cartons on delivery. Victor Osmond arranged a replacement and asked the Albany warehouse to improve pallet wrapping."
+  },
+  {
+    "id": "dm-0081",
+    "recordType": "policy",
+    "branch": "Rochester",
+    "department": "Management",
+    "createdAt": "2026-06-17",
+    "subject": "Fire safety inspection results",
+    "content": "A fire safety inspection of Rochester found blocked exit near the warehouse. Alan Prentice corrected it the same day and Hector Alvarez updated the evacuation map."
+  },
+  {
+    "id": "dm-0082",
+    "recordType": "hr-note",
+    "branch": "Syracuse",
+    "department": "HR",
+    "createdAt": "2026-06-19",
+    "subject": "Ergonomics review",
+    "content": "Ivy Chen completed an ergonomics review for the Syracuse reception desk after Bianca Rao reported wrist strain. New chairs and a monitor riser were approved."
+  },
+  {
+    "id": "dm-0083",
+    "recordType": "branch-update",
+    "branch": "Binghamton",
+    "department": "Management",
+    "createdAt": "2026-06-21",
+    "subject": "Branch hours change",
+    "content": "The Binghamton branch will open thirty minutes earlier to serve morning delivery pickups. Jonah Mbeki notified staff and updated the door signage."
+  },
+  {
+    "id": "dm-0084",
+    "recordType": "warehouse-note",
+    "branch": "Scranton",
+    "department": "Warehouse",
+    "createdAt": "2026-06-23",
+    "subject": "Forklift out of service",
+    "content": "The Scranton warehouse forklift needs a hydraulic repair. Karen Dowd rerouted loading to the second dock so shipments were not delayed."
+  },
+  {
+    "id": "dm-0085",
+    "recordType": "meeting-note",
+    "branch": "Stamford",
+    "department": "Management",
+    "createdAt": "2026-06-25",
+    "subject": "Pricing decision",
+    "content": "Management decided to hold paper pricing steady this quarter. Evan Brooks will communicate the decision to the Stamford sales team."
+  },
+  {
+    "id": "dm-0086",
+    "recordType": "hr-note",
+    "branch": "Utica",
+    "department": "HR",
+    "createdAt": "2026-06-27",
+    "subject": "Conflict resolution",
+    "content": "Farah Nazari and a warehouse colleague at Utica had a scheduling disagreement. Marisol Reyes mediated and both agreed on a rotation."
+  },
+  {
+    "id": "dm-0087",
+    "recordType": "sales-note",
+    "branch": "Nashua",
+    "department": "Sales",
+    "createdAt": "2026-06-29",
+    "subject": "Pipeline update",
+    "content": "Nadia Petrov updated the Nashua pipeline: three paper accounts in negotiation, including Cedar Grove Clinic. Grace Lindqvist will follow up before month end."
+  },
+  {
+    "id": "dm-0088",
+    "recordType": "customer-call",
+    "branch": "Akron",
+    "department": "Customer Service",
+    "createdAt": "2026-07-01",
+    "subject": "Follow-up call on complaint",
+    "content": "Hector Alvarez followed up by phone with Northgate Law about a damaged-goods complaint. The replacement arrived and Northgate Law withdrew the complaint."
+  },
+  {
+    "id": "dm-0089",
+    "recordType": "internal-memo",
+    "branch": "Albany",
+    "department": "Management",
+    "createdAt": "2026-07-03",
+    "subject": "Printer replacement proposal",
+    "content": "Given the ongoing printer problems in Albany, Ivy Chen proposed replacing the aging unit. The cost is offset by reduced paper waste and fewer support calls."
+  },
+  {
+    "id": "dm-0090",
+    "recordType": "sales-note",
+    "branch": "Rochester",
+    "department": "Sales",
+    "createdAt": "2026-07-05",
+    "subject": "Bulk cardstock quote",
+    "content": "Parkway Printing asked Jonah Mbeki for a bulk cardstock quote. Margins are thin, so Jonah Mbeki escalated pricing approval before committing the Rochester branch to the deal."
+  },
+  {
+    "id": "dm-0091",
+    "recordType": "complaint",
+    "branch": "Syracuse",
+    "department": "Customer Service",
+    "createdAt": "2026-07-07",
+    "subject": "Billing dispute",
+    "content": "Blue Heron Cafe disputed a duplicate invoice. Sven Larsson corrected the billing and Karen Dowd confirmed the customer was satisfied with the resolution."
+  },
+  {
+    "id": "dm-0092",
+    "recordType": "policy",
+    "branch": "Binghamton",
+    "department": "Management",
+    "createdAt": "2026-07-09",
+    "subject": "Updated evacuation procedure",
+    "content": "Following the last drill, Liam Fitzgerald revised the Binghamton evacuation procedure so warehouse staff and sales staff use separate muster points."
+  },
+  {
+    "id": "dm-0093",
+    "recordType": "hr-note",
+    "branch": "Scranton",
+    "department": "HR",
+    "createdAt": "2026-07-11",
+    "subject": "Safety training completed",
+    "content": "All Scranton warehouse staff completed forklift safety training. Marisol Reyes recorded the certifications in the HR file."
+  },
+  {
+    "id": "dm-0094",
+    "recordType": "branch-update",
+    "branch": "Stamford",
+    "department": "Management",
+    "createdAt": "2026-07-13",
+    "subject": "Cross-branch coverage",
+    "content": "With Nadia Petrov on leave, the Stamford branch arranged coverage from a neighboring branch so sales calls and reception stayed staffed."
+  },
+  {
+    "id": "dm-0095",
+    "recordType": "warehouse-note",
+    "branch": "Utica",
+    "department": "Warehouse",
+    "createdAt": "2026-07-15",
+    "subject": "Shipping backlog cleared",
+    "content": "Omar Haddad cleared a shipping backlog in the Utica warehouse after a busy paper sales week. Dispatch is back on schedule."
+  },
+  {
+    "id": "dm-0096",
+    "recordType": "meeting-note",
+    "branch": "Nashua",
+    "department": "Management",
+    "createdAt": "2026-07-17",
+    "subject": "Headcount decision",
+    "content": "Carl Winters approved one seasonal warehouse hire for the Nashua branch to handle the shipping backlog identified last week."
+  },
+  {
+    "id": "dm-0097",
+    "recordType": "hr-note",
+    "branch": "Akron",
+    "department": "HR",
+    "createdAt": "2026-07-19",
+    "subject": "Return from leave",
+    "content": "Rosa Delgado returned from leave to the Akron branch. HR confirmed benefits and updated the roster."
+  },
+  {
+    "id": "dm-0098",
+    "recordType": "sales-note",
+    "branch": "Buffalo",
+    "department": "Sales",
+    "createdAt": "2026-07-21",
+    "subject": "Target exceeded",
+    "content": "The Buffalo branch exceeded its paper sales target this month. Sven Larsson credited strong repeat orders and a resolved delivery complaint."
+  },
+  {
+    "id": "dm-0099",
+    "recordType": "customer-call",
+    "branch": "Albany",
+    "department": "Customer Service",
+    "createdAt": "2026-07-23",
+    "subject": "Onboarding call",
+    "content": "Farah Nazari held an onboarding call with Summit Insurance for a new paper account served by the Albany branch, covering delivery windows and billing."
+  },
+  {
+    "id": "dm-0100",
+    "recordType": "internal-memo",
+    "branch": "Syracuse",
+    "department": "Management",
+    "createdAt": "2026-07-25",
+    "subject": "Printer outage on the sales floor",
+    "content": "The shared laser printer in Syracuse jammed repeatedly this week. Victor Osmond reported that reams of paper were wasted and asked facilities for a service visit. Until it is fixed, please route print jobs to the reception printer."
+  },
+  {
+    "id": "dm-0101",
+    "recordType": "sales-note",
+    "branch": "Binghamton",
+    "department": "Sales",
+    "createdAt": "2026-07-27",
+    "subject": "Paper reorder for Ironwood Construction",
+    "content": "Alan Prentice closed a repeat order of forty cases of multipurpose paper for Ironwood Construction. The Binghamton branch will fulfill from local stock and follow up on a glossy paper sample the client requested."
+  },
+  {
+    "id": "dm-0102",
+    "recordType": "complaint",
+    "branch": "Scranton",
+    "department": "Customer Service",
+    "createdAt": "2026-07-29",
+    "subject": "Late delivery complaint from Lakeside Dental",
+    "content": "Lakeside Dental filed a complaint that a paper shipment arrived three days late. Bianca Rao apologized, issued a credit, and flagged the Scranton warehouse dispatch delay for review."
+  },
+  {
+    "id": "dm-0103",
+    "recordType": "policy",
+    "branch": "Stamford",
+    "department": "Management",
+    "createdAt": "2026-07-31",
+    "subject": "Fire drill schedule",
+    "content": "The Stamford branch will hold a fire drill next Thursday. Carl Winters is the floor warden and will confirm that all exits and extinguishers are unobstructed."
+  },
+  {
+    "id": "dm-0104",
+    "recordType": "hr-note",
+    "branch": "Utica",
+    "department": "HR",
+    "createdAt": "2026-08-02",
+    "subject": "Slip hazard reported",
+    "content": "Dana Osei reported a slip hazard from a leaking cooler in the Utica break room. Facilities placed a mat and scheduled a repair to prevent injury."
+  },
+  {
+    "id": "dm-0105",
+    "recordType": "branch-update",
+    "branch": "Nashua",
+    "department": "Management",
+    "createdAt": "2026-08-04",
+    "subject": "Nashua monthly branch update",
+    "content": "Evan Brooks summarized the month for the Nashua branch: paper sales up modestly, one printer problem resolved, and a customer complaint closed. Morale is steady."
+  },
+  {
+    "id": "dm-0106",
+    "recordType": "warehouse-note",
+    "branch": "Akron",
+    "department": "Warehouse",
+    "createdAt": "2026-08-06",
+    "subject": "Inventory discrepancy",
+    "content": "Farah Nazari found a count discrepancy on multipurpose paper in the Akron warehouse. A recount matched the system after correcting a mislabeled pallet."
+  },
+  {
+    "id": "dm-0107",
+    "recordType": "meeting-note",
+    "branch": "Buffalo",
+    "department": "Management",
+    "createdAt": "2026-08-08",
+    "subject": "Quarterly planning meeting",
+    "content": "In the Buffalo planning meeting, Grace Lindqvist and Nadia Petrov agreed to prioritize paper sales targets and to budget for a printer replacement after repeated problems."
+  },
+  {
+    "id": "dm-0108",
+    "recordType": "hr-note",
+    "branch": "Albany",
+    "department": "HR",
+    "createdAt": "2026-08-10",
+    "subject": "Recognition for Hector Alvarez",
+    "content": "Omar Haddad recognized Hector Alvarez for resolving a difficult customer complaint at the Albany branch. A note was added to the employee file."
+  },
+  {
+    "id": "dm-0109",
+    "recordType": "sales-note",
+    "branch": "Rochester",
+    "department": "Sales",
+    "createdAt": "2026-08-12",
+    "subject": "Quarterly target review",
+    "content": "Ivy Chen reviewed the Rochester branch sales targets. Paper sales are close to goal; a push on Parkway Printing and two other accounts should close the gap."
+  },
+  {
+    "id": "dm-0110",
+    "recordType": "customer-call",
+    "branch": "Syracuse",
+    "department": "Customer Service",
+    "createdAt": "2026-08-14",
+    "subject": "Call with Blue Heron Cafe about reorder",
+    "content": "Jonah Mbeki called Blue Heron Cafe to confirm a paper reorder and check satisfaction after a prior late delivery. The client was pleased and increased the order."
+  },
+  {
+    "id": "dm-0111",
+    "recordType": "internal-memo",
+    "branch": "Scranton",
+    "department": "Management",
+    "createdAt": "2026-08-16",
+    "subject": "Recurring printer maintenance",
+    "content": "Karen Dowd logged the third printer breakdown this month at the Scranton branch. Toner is low and the fuser needs replacement. Sven Larsson approved the maintenance budget so the printer does not disrupt paper sample runs."
+  },
+  {
+    "id": "dm-0112",
+    "recordType": "sales-note",
+    "branch": "Stamford",
+    "department": "Sales",
+    "createdAt": "2026-08-18",
+    "subject": "New paper account opened",
+    "content": "Liam Fitzgerald opened a new account with Harborview Realty for recycled copy paper. Tara Whitfield helped prepare the quote. This lifts the Stamford branch toward its quarterly paper sales target."
+  },
+  {
+    "id": "dm-0113",
+    "recordType": "complaint",
+    "branch": "Utica",
+    "department": "Customer Service",
+    "createdAt": "2026-08-20",
+    "subject": "Damaged goods complaint",
+    "content": "Meridian Accounting reported water-damaged cartons on delivery. Marisol Reyes arranged a replacement and asked the Utica warehouse to improve pallet wrapping."
+  },
+  {
+    "id": "dm-0114",
+    "recordType": "policy",
+    "branch": "Nashua",
+    "department": "Management",
+    "createdAt": "2026-08-22",
+    "subject": "Fire safety inspection results",
+    "content": "A fire safety inspection of Nashua found blocked exit near the warehouse. Nadia Petrov corrected it the same day and Alan Prentice updated the evacuation map."
+  },
+  {
+    "id": "dm-0115",
+    "recordType": "hr-note",
+    "branch": "Akron",
+    "department": "HR",
+    "createdAt": "2026-08-24",
+    "subject": "Ergonomics review",
+    "content": "Bianca Rao completed an ergonomics review for the Akron reception desk after Omar Haddad reported wrist strain. New chairs and a monitor riser were approved."
+  },
+  {
+    "id": "dm-0116",
+    "recordType": "branch-update",
+    "branch": "Buffalo",
+    "department": "Management",
+    "createdAt": "2026-08-26",
+    "subject": "Branch hours change",
+    "content": "The Buffalo branch will open thirty minutes earlier to serve morning delivery pickups. Carl Winters notified staff and updated the door signage."
+  },
+  {
+    "id": "dm-0117",
+    "recordType": "warehouse-note",
+    "branch": "Albany",
+    "department": "Warehouse",
+    "createdAt": "2026-08-28",
+    "subject": "Forklift out of service",
+    "content": "The Albany warehouse forklift needs a hydraulic repair. Dana Osei rerouted loading to the second dock so shipments were not delayed."
+  },
+  {
+    "id": "dm-0118",
+    "recordType": "meeting-note",
+    "branch": "Rochester",
+    "department": "Management",
+    "createdAt": "2026-08-30",
+    "subject": "Pricing decision",
+    "content": "Management decided to hold paper pricing steady this quarter. Sven Larsson will communicate the decision to the Rochester sales team."
+  },
+  {
+    "id": "dm-0119",
+    "recordType": "hr-note",
+    "branch": "Syracuse",
+    "department": "HR",
+    "createdAt": "2026-09-01",
+    "subject": "Conflict resolution",
+    "content": "Tara Whitfield and a warehouse colleague at Syracuse had a scheduling disagreement. Farah Nazari mediated and both agreed on a rotation."
+  },
+  {
+    "id": "dm-0120",
+    "recordType": "sales-note",
+    "branch": "Binghamton",
+    "department": "Sales",
+    "createdAt": "2026-09-03",
+    "subject": "Pipeline update",
+    "content": "Grace Lindqvist updated the Binghamton pipeline: three paper accounts in negotiation, including Ironwood Construction. Victor Osmond will follow up before month end."
+  },
+  {
+    "id": "dm-0121",
+    "recordType": "customer-call",
+    "branch": "Scranton",
+    "department": "Customer Service",
+    "createdAt": "2026-09-05",
+    "subject": "Follow-up call on complaint",
+    "content": "Alan Prentice followed up by phone with Lakeside Dental about a damaged-goods complaint. The replacement arrived and Lakeside Dental withdrew the complaint."
+  },
+  {
+    "id": "dm-0122",
+    "recordType": "internal-memo",
+    "branch": "Utica",
+    "department": "Management",
+    "createdAt": "2026-09-07",
+    "subject": "Printer replacement proposal",
+    "content": "Given the ongoing printer problems in Utica, Bianca Rao proposed replacing the aging unit. The cost is offset by reduced paper waste and fewer support calls."
+  },
+  {
+    "id": "dm-0123",
+    "recordType": "sales-note",
+    "branch": "Nashua",
+    "department": "Sales",
+    "createdAt": "2026-09-09",
+    "subject": "Bulk cardstock quote",
+    "content": "Cedar Grove Clinic asked Carl Winters for a bulk cardstock quote. Margins are thin, so Carl Winters escalated pricing approval before committing the Nashua branch to the deal."
+  },
+  {
+    "id": "dm-0124",
+    "recordType": "complaint",
+    "branch": "Akron",
+    "department": "Customer Service",
+    "createdAt": "2026-09-11",
+    "subject": "Billing dispute",
+    "content": "Northgate Law disputed a duplicate invoice. Karen Dowd corrected the billing and Dana Osei confirmed the customer was satisfied with the resolution."
+  },
+  {
+    "id": "dm-0125",
+    "recordType": "policy",
+    "branch": "Buffalo",
+    "department": "Management",
+    "createdAt": "2026-09-13",
+    "subject": "Updated evacuation procedure",
+    "content": "Following the last drill, Evan Brooks revised the Buffalo evacuation procedure so warehouse staff and sales staff use separate muster points."
+  },
+  {
+    "id": "dm-0126",
+    "recordType": "hr-note",
+    "branch": "Albany",
+    "department": "HR",
+    "createdAt": "2026-09-15",
+    "subject": "Safety training completed",
+    "content": "All Albany warehouse staff completed forklift safety training. Farah Nazari recorded the certifications in the HR file."
+  },
+  {
+    "id": "dm-0127",
+    "recordType": "branch-update",
+    "branch": "Rochester",
+    "department": "Management",
+    "createdAt": "2026-09-17",
+    "subject": "Cross-branch coverage",
+    "content": "With Grace Lindqvist on leave, the Rochester branch arranged coverage from a neighboring branch so sales calls and reception stayed staffed."
+  },
+  {
+    "id": "dm-0128",
+    "recordType": "warehouse-note",
+    "branch": "Syracuse",
+    "department": "Warehouse",
+    "createdAt": "2026-09-19",
+    "subject": "Shipping backlog cleared",
+    "content": "Hector Alvarez cleared a shipping backlog in the Syracuse warehouse after a busy paper sales week. Dispatch is back on schedule."
+  },
+  {
+    "id": "dm-0129",
+    "recordType": "meeting-note",
+    "branch": "Binghamton",
+    "department": "Management",
+    "createdAt": "2026-09-21",
+    "subject": "Headcount decision",
+    "content": "Priya Nair approved one seasonal warehouse hire for the Binghamton branch to handle the shipping backlog identified last week."
+  },
+  {
+    "id": "dm-0130",
+    "recordType": "hr-note",
+    "branch": "Scranton",
+    "department": "HR",
+    "createdAt": "2026-09-23",
+    "subject": "Return from leave",
+    "content": "Jonah Mbeki returned from leave to the Scranton branch. HR confirmed benefits and updated the roster."
+  },
+  {
+    "id": "dm-0131",
+    "recordType": "sales-note",
+    "branch": "Stamford",
+    "department": "Sales",
+    "createdAt": "2026-09-25",
+    "subject": "Target exceeded",
+    "content": "The Stamford branch exceeded its paper sales target this month. Karen Dowd credited strong repeat orders and a resolved delivery complaint."
+  },
+  {
+    "id": "dm-0132",
+    "recordType": "customer-call",
+    "branch": "Utica",
+    "department": "Customer Service",
+    "createdAt": "2026-09-27",
+    "subject": "Onboarding call",
+    "content": "Tara Whitfield held an onboarding call with Meridian Accounting for a new paper account served by the Utica branch, covering delivery windows and billing."
+  }
+]

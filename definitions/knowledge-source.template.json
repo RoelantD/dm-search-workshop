@@ -1,0 +1,47 @@
+{
+  "objectType": "knowledgeSource",
+  "name": "{{namespace}}-corporate-knowledge-source",
+  "apiVersion": "{{apiVersion}}",
+  "endpoint": "{{searchEndpoint}}",
+  "definition": {
+    "name": "{{namespace}}-corporate-knowledge-source",
+    "kind": "searchIndex",
+    "description": "Grounding content for Foundry IQ, built over the corporate archive index.",
+    "encryptionKey": null,
+    "searchIndexParameters": {
+      "searchIndexName": "{{namespace}}-corporate-index",
+      "semanticConfigurationName": "corporate-semantic",
+      "searchFields": [
+        {
+          "name": "subject"
+        },
+        {
+          "name": "content"
+        }
+      ],
+      "sourceDataFields": [
+        {
+          "name": "recordId"
+        },
+        {
+          "name": "recordType"
+        },
+        {
+          "name": "branch"
+        },
+        {
+          "name": "department"
+        },
+        {
+          "name": "date"
+        },
+        {
+          "name": "subject"
+        },
+        {
+          "name": "content"
+        }
+      ]
+    }
+  }
+}
