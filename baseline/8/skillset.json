@@ -1,0 +1,91 @@
+{
+  "objectType": "skillset",
+  "name": "{{namespace}}-corporate-skillset",
+  "apiVersion": "2026-04-01",
+  "endpoint": "{{searchEndpoint}}",
+  "definition": {
+    "name": "{{namespace}}-corporate-skillset",
+    "description": "Enrich corporate archive records with recognized entities, key phrases, and a content embedding for vector search.",
+    "skills": [
+      {
+        "@odata.type": "#Microsoft.Skills.Text.V3.EntityRecognitionSkill",
+        "name": "entity-recognition",
+        "description": "Extract people, organizations, and locations from record content.",
+        "categories": [
+          "Person",
+          "Organization",
+          "Location"
+        ],
+        "defaultLanguageCode": "en",
+        "context": "/document",
+        "inputs": [
+          {
+            "name": "text",
+            "source": "/document/content"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "persons",
+            "targetName": "people"
+          },
+          {
+            "name": "organizations",
+            "targetName": "organizations"
+          },
+          {
+            "name": "locations",
+            "targetName": "locations"
+          }
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Skills.Text.KeyPhraseExtractionSkill",
+        "name": "key-phrases",
+        "description": "Extract the main themes from record content.",
+        "defaultLanguageCode": "en",
+        "context": "/document",
+        "inputs": [
+          {
+            "name": "text",
+            "source": "/document/content"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "keyPhrases",
+            "targetName": "keyPhrases"
+          }
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Skills.Text.AzureOpenAIEmbeddingSkill",
+        "name": "content-embedding",
+        "description": "Embed record content so the index can answer vector and hybrid queries.",
+        "context": "/document",
+        "resourceUri": "{{foundryEndpoint}}",
+        "deploymentId": "{{embeddingDeploymentName}}",
+        "modelName": "{{embeddingModelName}}",
+        "dimensions": 1536,
+        "inputs": [
+          {
+            "name": "text",
+            "source": "/document/content"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "embedding",
+            "targetName": "contentVector"
+          }
+        ]
+      }
+    ],
+    "cognitiveServices": {
+      "@odata.type": "#Microsoft.Azure.Search.AIServicesByIdentity",
+      "subdomainUrl": "{{foundryEndpoint}}",
+      "identity": null
+    }
+  },
+  "stretchNotice": "Optional Stage 8 (vector + hybrid). Adds the AzureOpenAIEmbedding skill on top of the Stage 5 skillset so the indexer vectorizes content at ingestion time (integrated vectorization). Generally available; no preview API involved."
+}

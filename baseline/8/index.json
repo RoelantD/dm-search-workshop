@@ -1,0 +1,192 @@
+{
+  "objectType": "index",
+  "name": "{{namespace}}-corporate-index",
+  "apiVersion": "2026-04-01",
+  "endpoint": "{{searchEndpoint}}",
+  "stretchNotice": "Optional Stage 8 (vector + hybrid). Adds the contentVector field, an HNSW algorithm, and an Azure OpenAI vectorizer on top of the Stage 5 enriched index. Generally available; no preview API involved.",
+  "dimensionsNotice": "contentVector.dimensions is 1536 for text-embedding-3-small (the workshop default). If the shared Foundry resource deploys text-embedding-3-large instead, change it to 3072. The value must match the embedding model exactly or the indexer fails on every document.",
+  "definition": {
+    "name": "{{namespace}}-corporate-index",
+    "fields": [
+      {
+        "name": "recordId",
+        "type": "Edm.String",
+        "key": true,
+        "searchable": false,
+        "filterable": false,
+        "facetable": false,
+        "sortable": false,
+        "retrievable": true
+      },
+      {
+        "name": "recordType",
+        "type": "Edm.String",
+        "key": false,
+        "searchable": false,
+        "filterable": true,
+        "facetable": true,
+        "sortable": false,
+        "retrievable": true
+      },
+      {
+        "name": "branch",
+        "type": "Edm.String",
+        "key": false,
+        "searchable": false,
+        "filterable": true,
+        "facetable": true,
+        "sortable": false,
+        "retrievable": true
+      },
+      {
+        "name": "department",
+        "type": "Edm.String",
+        "key": false,
+        "searchable": false,
+        "filterable": true,
+        "facetable": true,
+        "sortable": false,
+        "retrievable": true
+      },
+      {
+        "name": "date",
+        "type": "Edm.DateTimeOffset",
+        "key": false,
+        "searchable": false,
+        "filterable": true,
+        "facetable": false,
+        "sortable": true,
+        "retrievable": true
+      },
+      {
+        "name": "subject",
+        "type": "Edm.String",
+        "key": false,
+        "searchable": true,
+        "filterable": false,
+        "facetable": false,
+        "sortable": false,
+        "retrievable": true
+      },
+      {
+        "name": "content",
+        "type": "Edm.String",
+        "key": false,
+        "searchable": true,
+        "filterable": false,
+        "facetable": false,
+        "sortable": false,
+        "retrievable": true
+      },
+      {
+        "name": "people",
+        "type": "Collection(Edm.String)",
+        "key": false,
+        "searchable": true,
+        "filterable": true,
+        "facetable": true,
+        "sortable": false,
+        "retrievable": true
+      },
+      {
+        "name": "organizations",
+        "type": "Collection(Edm.String)",
+        "key": false,
+        "searchable": true,
+        "filterable": true,
+        "facetable": true,
+        "sortable": false,
+        "retrievable": true
+      },
+      {
+        "name": "locations",
+        "type": "Collection(Edm.String)",
+        "key": false,
+        "searchable": true,
+        "filterable": true,
+        "facetable": true,
+        "sortable": false,
+        "retrievable": true
+      },
+      {
+        "name": "keyPhrases",
+        "type": "Collection(Edm.String)",
+        "key": false,
+        "searchable": true,
+        "filterable": true,
+        "facetable": true,
+        "sortable": false,
+        "retrievable": true
+      },
+      {
+        "name": "contentVector",
+        "type": "Collection(Edm.Single)",
+        "key": false,
+        "searchable": true,
+        "filterable": false,
+        "facetable": false,
+        "sortable": false,
+        "retrievable": false,
+        "dimensions": 1536,
+        "vectorSearchProfile": "corporate-vector-profile"
+      }
+    ],
+    "vectorSearch": {
+      "algorithms": [
+        {
+          "name": "corporate-hnsw",
+          "kind": "hnsw",
+          "hnswParameters": {
+            "metric": "cosine",
+            "m": 4,
+            "efConstruction": 400,
+            "efSearch": 500
+          }
+        }
+      ],
+      "vectorizers": [
+        {
+          "name": "corporate-vectorizer",
+          "kind": "azureOpenAI",
+          "azureOpenAIParameters": {
+            "resourceUri": "{{foundryEndpoint}}",
+            "deploymentId": "{{embeddingDeploymentName}}",
+            "modelName": "{{embeddingModelName}}"
+          }
+        }
+      ],
+      "profiles": [
+        {
+          "name": "corporate-vector-profile",
+          "algorithm": "corporate-hnsw",
+          "vectorizer": "corporate-vectorizer"
+        }
+      ]
+    },
+    "semantic": {
+      "configurations": [
+        {
+          "name": "corporate-semantic",
+          "prioritizedFields": {
+            "titleField": {
+              "fieldName": "subject"
+            },
+            "prioritizedContentFields": [
+              {
+                "fieldName": "content"
+              }
+            ],
+            "prioritizedKeywordsFields": [
+              {
+                "fieldName": "branch"
+              },
+              {
+                "fieldName": "department"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

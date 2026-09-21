@@ -11,6 +11,9 @@
         "name": "{{namespace}}-corporate-knowledge-source"
       }
     ],
-    "encryptionKey": null
+    "encryptionKey": null,
+    "retrievalReasoningEffort": {
+      "kind": "minimal"
+    }
   }
 }

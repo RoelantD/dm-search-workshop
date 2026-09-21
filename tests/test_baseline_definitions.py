@@ -30,6 +30,12 @@ ALLOWED_PLACEHOLDERS = {
     "foundryEndpoint",
     "foundryResourceId",
     "modelDeploymentName",
+    # Stage 6 answer synthesis validates modelName against a fixed list of BASE model names,
+    # so it is a separate value from the deployment name (they are rarely the same string).
+    "modelName",
+    # Optional Stage 8 vector/hybrid stretch.
+    "embeddingDeploymentName",
+    "embeddingModelName",
 }
 
 # The single GA API version every generally available asset may reference.
@@ -132,3 +138,41 @@ def test_every_object_name_carries_namespace_prefix() -> None:
         obj = json.loads(path.read_text(encoding="utf-8"))
         if "name" in obj:
             assert obj["name"].startswith("{{namespace}}-"), f"{path.name} object name is not namespaced"
+
+
+def test_every_placeholder_used_is_expanded_by_the_catch_up_script() -> None:
+    """Guardrail for the emergency fallback path.
+
+    ``workshop.ps1 baseline apply`` substitutes placeholders textually. A placeholder that
+    appears in a baseline but not in the script's Expand-Template is PUT to Azure verbatim as
+    ``{{name}}``, which fails at apply time, in the room, for the attendee who is already behind.
+    """
+    script = (SEARCH_WORKSHOP / "scripts" / "workshop.ps1").read_text(encoding="utf-8")
+    # Expand-Template drives substitution from a $values hashtable keyed by placeholder name.
+    block = re.search(r"\$values = @\{(.*?)^  \}", script, re.DOTALL | re.MULTILINE)
+    assert block, "could not find the $values table in Expand-Template"
+    known = set(re.findall(r"^\s*(\w+)\s*=", block.group(1), re.MULTILINE))
+    used: set[str] = set()
+    for path in ASSET_FILES:
+        used |= set(_PLACEHOLDER.findall(path.read_text(encoding="utf-8")))
+    unexpanded = used - known
+    assert not unexpanded, (
+        "workshop.ps1 does not expand these placeholders used by baselines: "
+        f"{sorted(unexpanded)}"
+    )
+
+
+def test_catch_up_script_handles_every_baseline_object_type() -> None:
+    """Every objectType shipped in a baseline must have a REST path in workshop.ps1.
+
+    Without this, ``baseline apply 5`` and ``baseline apply 6`` throw "Unknown objectType"
+    instead of restoring the attendee's skillset or knowledge objects.
+    """
+    script = (SEARCH_WORKSHOP / "scripts" / "workshop.ps1").read_text(encoding="utf-8")
+    object_types = {
+        json.loads(path.read_text(encoding="utf-8")).get("objectType")
+        for path in sorted(BASELINE_DIR.rglob("*.json"))
+    }
+    object_types.discard(None)
+    missing = {t for t in object_types if t not in script}
+    assert not missing, f"workshop.ps1 cannot apply these baseline object types: {sorted(missing)}"

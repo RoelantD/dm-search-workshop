@@ -3,6 +3,7 @@
   "name": "{{namespace}}-corporate-kb",
   "apiVersion": "2026-08-01-preview",
   "endpoint": "{{searchEndpoint}}",
+  "variant": "synthesis",
   "previewNotice": "Pinned to the 2026-08-01-preview API version for grounded answer synthesis. Everything else in the workshop is generally available on 2026-04-01. Apply this variant only for the Stage 6 synthesis finale.",
   "definition": {
     "name": "{{namespace}}-corporate-kb",
@@ -20,13 +21,13 @@
         "azureOpenAIParameters": {
           "resourceUri": "{{foundryEndpoint}}",
           "deploymentId": "{{modelDeploymentName}}",
-          "modelName": "{{modelDeploymentName}}"
+          "modelName": "{{modelName}}"
         }
       }
     ],
     "encryptionKey": null,
     "retrievalReasoningEffort": {
-      "kind": "auto"
+      "kind": "low"
     }
   }
 }

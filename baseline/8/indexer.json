@@ -1,0 +1,70 @@
+{
+  "objectType": "indexer",
+  "name": "{{namespace}}-corporate-indexer",
+  "apiVersion": "2026-04-01",
+  "endpoint": "{{searchEndpoint}}",
+  "definition": {
+    "name": "{{namespace}}-corporate-indexer",
+    "dataSourceName": "{{namespace}}-corporate-datasource",
+    "targetIndexName": "{{namespace}}-corporate-index",
+    "skillsetName": "{{namespace}}-corporate-skillset",
+    "parameters": {
+      "configuration": {
+        "parsingMode": "jsonArray"
+      }
+    },
+    "fieldMappings": [
+      {
+        "sourceFieldName": "id",
+        "targetFieldName": "recordId"
+      },
+      {
+        "sourceFieldName": "recordType",
+        "targetFieldName": "recordType"
+      },
+      {
+        "sourceFieldName": "branch",
+        "targetFieldName": "branch"
+      },
+      {
+        "sourceFieldName": "department",
+        "targetFieldName": "department"
+      },
+      {
+        "sourceFieldName": "createdAt",
+        "targetFieldName": "date"
+      },
+      {
+        "sourceFieldName": "subject",
+        "targetFieldName": "subject"
+      },
+      {
+        "sourceFieldName": "content",
+        "targetFieldName": "content"
+      }
+    ],
+    "outputFieldMappings": [
+      {
+        "sourceFieldName": "/document/people",
+        "targetFieldName": "people"
+      },
+      {
+        "sourceFieldName": "/document/organizations",
+        "targetFieldName": "organizations"
+      },
+      {
+        "sourceFieldName": "/document/locations",
+        "targetFieldName": "locations"
+      },
+      {
+        "sourceFieldName": "/document/keyPhrases",
+        "targetFieldName": "keyPhrases"
+      },
+      {
+        "sourceFieldName": "/document/contentVector",
+        "targetFieldName": "contentVector"
+      }
+    ]
+  },
+  "stretchNotice": "Optional Stage 8 (vector + hybrid). Same as the Stage 5 indexer plus the contentVector output field mapping. Reset and run after applying."
+}
