@@ -21,7 +21,6 @@ git clone https://github.com/RoelantD/dm-search-workshop.git
 | `definitions/` | The reference definition for every object you build, as version-controlled JSON. |
 | `baseline/<stage>/` | A known-good snapshot per stage, for catching up. |
 | `starter/<stage>/` | Partially completed definitions you finish yourself. |
-| `scripts/` | Facilitator and emergency-fallback tooling. Not needed on the normal path. |
 | `tests/` | Offline checks on the dataset, definitions, naming, and RBAC rules. |
 
 ## Placeholders
@@ -44,20 +43,14 @@ Stage 6 failure. The workshop's Session values page lists this session's actual 
 ## Baselines
 
 Every technical stage has a portal fallback documented on its workshop page: paste the matching
-`baseline/<stage>/*.json` under your own namespace. That is the expected path.
+`baseline/<stage>/*.json` under your own namespace, replacing the placeholders above. That is the
+expected path, and it needs nothing but a browser.
 
-The script is the emergency backstop, for facilitators:
+Facilitator tooling (access assignment, dataset upload, scripted baseline restore) lives in the
+private workshop repository, not here. If you are stuck and the portal fallback is not working,
+ask your facilitator.
 
-```bash
-./scripts/workshop.ps1 baseline list
-./scripts/workshop.ps1 baseline apply 5 -Namespace t01-p01 -Endpoint <search-endpoint> -FoundryEndpoint <foundry-endpoint>
-./scripts/workshop.ps1 baseline apply 6 -Variant synthesis   # preview answer-synthesis finale
-./scripts/workshop.ps1 status
-```
-
-It only ever touches objects beginning with your own namespace, authenticates with your Entra
-token, and refuses to run rather than push an unresolved placeholder. No API key, connection
-string, or other secret is read, printed, or required anywhere in this repo — the test suite
+No API key, connection string, or other secret appears anywhere in this repo, and the test suite
 enforces that.
 
 ## Tests
@@ -70,8 +63,7 @@ python -m pytest tests/ -q
 
 They check the dataset's integrity and themes, that the documented Stage 4 queries return a
 recognizable set, that every definition is valid JSON using only known placeholders and the
-pinned API versions, that no secret material appears anywhere, and that the catch-up script can
-actually apply every baseline it ships.
+pinned API versions, and that no secret material appears anywhere.
 
 > Note: several suites deliberately reach into the parent workshop repository (the docs pages,
 > the Bicep templates, the backend namespace module), so they only pass when run from the parent

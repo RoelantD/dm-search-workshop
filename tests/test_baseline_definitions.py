@@ -19,6 +19,9 @@ _REPO_ROOT = Path(__file__).resolve().parents[2]
 SEARCH_WORKSHOP = _REPO_ROOT / "search-workshop"
 DEFINITIONS_DIR = SEARCH_WORKSHOP / "definitions"
 BASELINE_DIR = SEARCH_WORKSHOP / "baseline"
+# Facilitator scripts are deliberately NOT in this public submodule; they live in the
+# private parent repo alongside deploy.ps1.
+SCRIPTS_DIR = _REPO_ROOT / "infra" / "search-workshop" / "scripts"
 
 # The only placeholders any template or baseline may contain (search-objects.contract.md).
 ALLOWED_PLACEHOLDERS = {
@@ -147,7 +150,7 @@ def test_every_placeholder_used_is_expanded_by_the_catch_up_script() -> None:
     appears in a baseline but not in the script's Expand-Template is PUT to Azure verbatim as
     ``{{name}}``, which fails at apply time, in the room, for the attendee who is already behind.
     """
-    script = (SEARCH_WORKSHOP / "scripts" / "workshop.ps1").read_text(encoding="utf-8")
+    script = (SCRIPTS_DIR / "workshop.ps1").read_text(encoding="utf-8")
     # Expand-Template drives substitution from a $values hashtable keyed by placeholder name.
     block = re.search(r"\$values = @\{(.*?)^  \}", script, re.DOTALL | re.MULTILINE)
     assert block, "could not find the $values table in Expand-Template"
@@ -168,7 +171,7 @@ def test_catch_up_script_handles_every_baseline_object_type() -> None:
     Without this, ``baseline apply 5`` and ``baseline apply 6`` throw "Unknown objectType"
     instead of restoring the attendee's skillset or knowledge objects.
     """
-    script = (SEARCH_WORKSHOP / "scripts" / "workshop.ps1").read_text(encoding="utf-8")
+    script = (SCRIPTS_DIR / "workshop.ps1").read_text(encoding="utf-8")
     object_types = {
         json.loads(path.read_text(encoding="utf-8")).get("objectType")
         for path in sorted(BASELINE_DIR.rglob("*.json"))

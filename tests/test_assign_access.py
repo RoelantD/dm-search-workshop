@@ -12,7 +12,8 @@ from __future__ import annotations
 from pathlib import Path
 
 _REPO_ROOT = Path(__file__).resolve().parents[2]
-ASSIGN_SCRIPT = _REPO_ROOT / "search-workshop" / "scripts" / "assign-access.ps1"
+# Facilitator scripts live in the private parent repo, not in this public submodule.
+ASSIGN_SCRIPT = _REPO_ROOT / "infra" / "search-workshop" / "scripts" / "assign-access.ps1"
 ATTENDEE_ROLES_BICEP = _REPO_ROOT / "infra" / "search-workshop" / "modules" / "attendee-roles.bicep"
 ATTENDEE_STORAGE_READER_BICEP = (
     _REPO_ROOT / "infra" / "search-workshop" / "modules" / "attendee-storage-reader.bicep"
