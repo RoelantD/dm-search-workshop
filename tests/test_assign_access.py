@@ -1,9 +1,11 @@
 """Attendee least-privilege assertions (T033, feature 010, Slice G).
 
 Pure-Python, no Azure calls. Asserts that the attendee access surface (the
-``assign-access.ps1`` facilitator script and the ``attendee-roles.bicep`` module)
-grants exactly the three intended roles and never Contributor, Owner, key actions, or
-any RBAC-admin role (FR-006/FR-007, SC-004/SC-005), and that no key is ever printed.
+``assign-access.ps1`` facilitator script and the ``attendee-roles.bicep`` /
+``attendee-storage-reader.bicep`` modules) grants exactly the four intended role
+assignments (three distinct role names, Reader used twice at two scopes) and never
+Contributor, Owner, key actions, or any RBAC-admin role (FR-006/FR-007, SC-004/SC-005),
+and that no key is ever printed.
 """
 from __future__ import annotations
 
@@ -12,6 +14,9 @@ from pathlib import Path
 _REPO_ROOT = Path(__file__).resolve().parents[2]
 ASSIGN_SCRIPT = _REPO_ROOT / "search-workshop" / "scripts" / "assign-access.ps1"
 ATTENDEE_ROLES_BICEP = _REPO_ROOT / "infra" / "search-workshop" / "modules" / "attendee-roles.bicep"
+ATTENDEE_STORAGE_READER_BICEP = (
+    _REPO_ROOT / "infra" / "search-workshop" / "modules" / "attendee-storage-reader.bicep"
+)
 
 INTENDED_ROLES = {
     "Dunder Mifflin Workshop Search Developer",
@@ -87,3 +92,26 @@ def test_attendee_module_scopes_reader_to_resource_group_only() -> None:
     # Reader is scoped to the resource group, not the subscription.
     assert "scope: resourceGroup()" in text
     assert "subscription().id" not in text
+
+
+def test_script_also_grants_reader_on_shared_storage_account() -> None:
+    text = _read(ASSIGN_SCRIPT)
+    assert "Resolve-SharedStorageAccount" in text, "script must resolve the shared storage account"
+    assert "Microsoft.Storage/storageAccounts" in text
+    assert "sharedStorageScope" in text
+
+
+def test_attendee_module_delegates_shared_storage_reader() -> None:
+    text = _read(ATTENDEE_ROLES_BICEP)
+    # The shared-storage Reader assignment is a nested module (cross-resource-group
+    # scope), not a direct resource in this file.
+    assert "attendee-storage-reader.bicep" in text
+    assert "sharedResourceGroupName" in text
+    assert "sharedStorageAccountName" in text
+
+
+def test_attendee_storage_reader_module_grants_only_reader() -> None:
+    text = _read(ATTENDEE_STORAGE_READER_BICEP)
+    assert READER in text, "Reader id missing"
+    for role_id in FORBIDDEN_ROLE_IDS:
+        assert role_id not in text, f"attendee storage-reader module must not grant role id {role_id}"
