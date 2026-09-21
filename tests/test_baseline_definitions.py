@@ -179,3 +179,23 @@ def test_catch_up_script_handles_every_baseline_object_type() -> None:
     object_types.discard(None)
     missing = {t for t in object_types if t not in script}
     assert not missing, f"workshop.ps1 cannot apply these baseline object types: {sorted(missing)}"
+
+
+def test_catch_up_script_resolves_baselines_across_the_submodule_boundary() -> None:
+    """The script and the baselines it applies now live in different repositories.
+
+    workshop.ps1 sits in the private repo at infra/search-workshop/scripts/; the baselines are
+    in the public search-workshop submodule. A path resolved relative to the script's own
+    folder silently points at a directory that does not exist, and the failure only shows up
+    when a facilitator reaches for the fallback mid-session.
+    """
+    script = (SCRIPTS_DIR / "workshop.ps1").read_text(encoding="utf-8")
+    assert "'../../..'" in script, (
+        "workshop.ps1 must resolve the repo root three levels up from its own folder"
+    )
+    assert "search-workshop/baseline" in script, (
+        "workshop.ps1 must resolve baselines inside the search-workshop submodule"
+    )
+    # Every stage the docs offer a scripted fallback for must actually be on disk.
+    for stage in (2, 3, 4, 5, 6):
+        assert (BASELINE_DIR / str(stage)).is_dir(), f"missing baseline for stage {stage}"
