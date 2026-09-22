@@ -53,3 +53,46 @@ def test_multi_record_themes_span_multiple_branches(records: list[dict]) -> None
             if keyword in f"{r['subject']} {r['content']}".lower()
         }
         assert len(branches) >= 2, f"theme '{keyword}' should span multiple branches"
+
+
+# The Stage 8 stretch proves vector retrieval by asking a question whose words are absent from
+# the archive but whose meaning is present. Both halves of that have to hold in the data.
+VECTOR_DEMO_QUERY_TERMS = (
+    "temperature",
+    "unhappy",
+    "air conditioning",
+    "thermostat",
+    "hvac",
+)
+WORKPLACE_ENVIRONMENT_MARKERS = (
+    "cooling unit",
+    "radiator",
+    "draught",
+    "boiler",
+    "damp air",
+    "ventilation",
+)
+
+
+def test_workplace_environment_records_exist_for_the_vector_demo(records: list[dict]) -> None:
+    """Stage 8 asks "staff unhappy about the office temperature" and promises vector search
+    surfaces topically related records. Without records about workplace comfort in the archive,
+    the query returns arbitrary nearest neighbours and the stage's whole argument falls flat."""
+    hits = [
+        r
+        for r in records
+        if any(m in f"{r['subject']} {r['content']}".lower() for m in WORKPLACE_ENVIRONMENT_MARKERS)
+    ]
+    assert len(hits) >= 6, f"only {len(hits)} workplace-environment records; Stage 8 needs a set"
+    assert len({r["branch"] for r in hits}) >= 3, "workplace-environment records should span branches"
+
+
+@pytest.mark.parametrize("term", VECTOR_DEMO_QUERY_TERMS)
+def test_vector_demo_query_terms_are_absent_from_the_archive(records: list[dict], term: str) -> None:
+    """The demo only lands because lexical retrieval cannot reach these records.
+
+    If a later dataset edit introduces the word "temperature" (or a near synonym the query
+    uses), lexical search starts matching too and Stage 8 stops demonstrating anything.
+    """
+    hits = [r["id"] for r in records if term in f"{r['subject']} {r['content']}".lower()]
+    assert not hits, f"'{term}' now appears in {hits}; the Stage 8 vocabulary-mismatch demo breaks"

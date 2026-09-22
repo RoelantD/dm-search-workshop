@@ -199,3 +199,51 @@ def test_catch_up_script_resolves_baselines_across_the_submodule_boundary() -> N
     # Every stage the docs offer a scripted fallback for must actually be on disk.
     for stage in (2, 3, 4, 5, 6):
         assert (BASELINE_DIR / str(stage)).is_dir(), f"missing baseline for stage {stage}"
+
+
+def _index_assets() -> list[Path]:
+    """Every versioned asset that carries an index definition with fields."""
+    return [
+        path
+        for path in ASSET_FILES
+        if json.loads(path.read_text(encoding="utf-8")).get("objectType") == "index"
+    ]
+
+
+@pytest.mark.parametrize("path", _index_assets(), ids=lambda p: str(p.relative_to(_REPO_ROOT)))
+def test_semantic_configuration_fields_are_searchable_and_retrievable(path: Path) -> None:
+    """Azure rejects a semantic configuration that names a field it cannot rank.
+
+    Every field in ``prioritizedFields`` must be attributed searchable and retrievable
+    (see "Configure semantic ranker" in the Azure AI Search docs). This bit us once: the
+    schema made ``branch`` and ``department`` filterable and facetable but not searchable,
+    while the Stage 4 semantic configuration listed both as keyword fields. ``searchable``
+    cannot be changed on a field that already exists, so the only recovery mid-session is
+    deleting and rebuilding the index, at Stage 4, with no slack left in the budget.
+    """
+    definition = json.loads(path.read_text(encoding="utf-8"))["definition"]
+    semantic = definition.get("semantic")
+    if not semantic:
+        return
+    attributes = {f["name"]: f for f in definition["fields"]}
+    for configuration in semantic["configurations"]:
+        prioritized = configuration["prioritizedFields"]
+        named: list[str] = []
+        if "titleField" in prioritized:
+            named.append(prioritized["titleField"]["fieldName"])
+        for key in ("prioritizedContentFields", "prioritizedKeywordsFields"):
+            named += [f["fieldName"] for f in prioritized.get(key, [])]
+        for name in named:
+            field = attributes.get(name)
+            assert field, (
+                f"semantic configuration '{configuration['name']}' names '{name}', "
+                f"which is not a field on the index"
+            )
+            assert field.get("searchable"), (
+                f"semantic configuration '{configuration['name']}' names '{name}', "
+                "which is not searchable; Azure rejects the index update"
+            )
+            assert field.get("retrievable"), (
+                f"semantic configuration '{configuration['name']}' names '{name}', "
+                "which is not retrievable; Azure rejects the index update"
+            )

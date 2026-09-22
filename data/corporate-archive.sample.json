@@ -100,38 +100,38 @@
   },
   {
     "id": "dm-0012",
-    "recordType": "internal-memo",
-    "branch": "Utica",
-    "department": "Management",
+    "recordType": "hr-note",
+    "branch": "Stamford",
+    "department": "HR",
     "createdAt": "2026-01-30",
-    "subject": "Recurring printer maintenance",
-    "content": "Liam Fitzgerald logged the third printer breakdown this month at the Utica branch. Toner is low and the fuser needs replacement. Tara Whitfield approved the maintenance budget so the printer does not disrupt paper sample runs."
+    "subject": "Cooling unit failure on the sales floor",
+    "content": "The cooling unit above the Stamford sales floor gave out during the warmest week of the year. Staff propped the doors open and brought desk fans from home. Liam Fitzgerald chased the contractor daily until it was running again."
   },
   {
     "id": "dm-0013",
-    "recordType": "sales-note",
+    "recordType": "internal-memo",
     "branch": "Nashua",
-    "department": "Sales",
+    "department": "Management",
     "createdAt": "2026-02-01",
-    "subject": "New paper account opened",
-    "content": "Marisol Reyes opened a new account with Cedar Grove Clinic for recycled copy paper. Victor Osmond helped prepare the quote. This lifts the Nashua branch toward its quarterly paper sales target."
+    "subject": "Recurring printer maintenance",
+    "content": "Marisol Reyes logged the third printer breakdown this month at the Nashua branch. Toner is low and the fuser needs replacement. Victor Osmond approved the maintenance budget so the printer does not disrupt paper sample runs."
   },
   {
     "id": "dm-0014",
-    "recordType": "complaint",
+    "recordType": "sales-note",
     "branch": "Akron",
-    "department": "Customer Service",
+    "department": "Sales",
     "createdAt": "2026-02-03",
-    "subject": "Damaged goods complaint",
-    "content": "Northgate Law reported water-damaged cartons on delivery. Nadia Petrov arranged a replacement and asked the Akron warehouse to improve pallet wrapping."
+    "subject": "New paper account opened",
+    "content": "Nadia Petrov opened a new account with Northgate Law for recycled copy paper. Alan Prentice helped prepare the quote. This lifts the Akron branch toward its quarterly paper sales target."
   },
   {
     "id": "dm-0015",
-    "recordType": "policy",
+    "recordType": "complaint",
     "branch": "Buffalo",
-    "department": "Management",
+    "department": "Customer Service",
     "createdAt": "2026-02-05",
-    "subject": "Fire safety inspection results",
-    "content": "A fire safety inspection of Buffalo found blocked exit near the warehouse. Omar Haddad corrected it the same day and Bianca Rao updated the evacuation map."
+    "subject": "Damaged goods complaint",
+    "content": "Riverbend Logistics reported water-damaged cartons on delivery. Omar Haddad arranged a replacement and asked the Buffalo warehouse to improve pallet wrapping."
   }
 ]

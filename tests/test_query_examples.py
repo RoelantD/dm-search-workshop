@@ -44,12 +44,25 @@ def test_printer_complaints_query_returns_recognizable_set(records: list[dict]) 
 
 
 def test_fire_safety_named_employee_query_returns_recognizable_set(records: list[dict]) -> None:
-    # Stage 4 query: fire safety incident involving a named employee (Alan Prentice).
-    hits = _matches(records, "fire", "Alan Prentice")
-    assert hits, "expected fire-safety records mentioning Alan Prentice"
+    # Stage 4 query: fire safety incident involving a named employee (Priya Nair).
+    hits = _matches(records, "fire", "Priya Nair")
+    assert hits, "expected fire-safety records mentioning Priya Nair"
     branches = {r["branch"] for r in hits}
-    assert {"Rochester", "Nashua"} <= branches, f"expected Rochester and Nashua, got {branches}"
+    assert {"Albany", "Stamford"} <= branches, f"expected Albany and Stamford, got {branches}"
     assert all(r["recordType"] == "policy" for r in hits), "fire-safety records are policy records"
+
+
+def test_enrichment_examples_name_real_multi_record_employees(records: list[dict]) -> None:
+    """Stage 5 points at two employees by name when showing extracted entities.
+
+    Both need several records, or the facet and filter examples on that page return a single
+    row and the enrichment looks like it barely did anything.
+    """
+    for employee, theme in (("Alan Prentice", "printer"), ("Bianca Rao", "paper")):
+        hits = _matches(records, employee)
+        assert len(hits) >= 5, f"{employee} appears in only {len(hits)} records"
+        themed = _matches(records, employee, theme)
+        assert themed, f"{employee} should appear in at least one '{theme}' record"
 
 
 def test_branch_sales_grouped_by_department_returns_recognizable_set(records: list[dict]) -> None:
@@ -68,4 +81,5 @@ def test_challenge_query_names_are_real_dataset_names(records: list[dict]) -> No
     all_text = " ".join(_text(r) for r in records)
     all_branches = {r["branch"] for r in records}
     assert "alan prentice" in all_text, "Alan Prentice must appear in the dataset"
+    assert "priya nair" in all_text, "Priya Nair must appear in the dataset"
     assert "Stamford" in all_branches, "Stamford must be a real branch in the dataset"

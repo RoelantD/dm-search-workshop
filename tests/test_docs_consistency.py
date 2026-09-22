@@ -133,3 +133,22 @@ def test_environment_manifest_emits_every_value_the_session_page_needs() -> None
     for key in ("foundryEndpoint", "modelDeploymentName", "modelName",
                 "embeddingDeploymentName", "embeddingModelName", "storageAccountName"):
         assert f"{key}:" in manifest, f"environmentManifest does not emit {key}"
+
+
+def test_template_placeholders_are_escaped_against_vue_interpolation() -> None:
+    """VitePress renders Markdown through Vue, which eats ``{{ ... }}`` everywhere.
+
+    A placeholder written as an ordinary code span (`` `{{namespace}}` ``) compiles to an
+    interpolation of an undefined property, so the page ships an empty ``<code></code>`` and the
+    sentence reads "Replace , , and with your own values". The fix is ``<code v-pre>``. This
+    shipped on four stage pages before anyone noticed, because the Markdown source looks right.
+    """
+    offenders: list[str] = []
+    for page in sorted((_REPO_ROOT / "docs").rglob("*.md")):
+        for number, line in enumerate(page.read_text(encoding="utf-8").splitlines(), start=1):
+            for match in re.finditer(r"`\{\{\s*\w+\s*\}\}`", line):
+                offenders.append(f"{page.relative_to(_REPO_ROOT).as_posix()}:{number} {match.group(0)}")
+    assert not offenders, (
+        "these placeholders render empty in the browser; wrap them in <code v-pre>...</code>:\n"
+        + "\n".join(offenders)
+    )
